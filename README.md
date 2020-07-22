@@ -17,7 +17,8 @@ We trust that this message finds you well!</br>
 ![Image Provided](https://github.com/Distributed-Production/Project-Distributed-Production-System-V2/blob/master/Clone.PNG)
 
 2. In your local machine. Open the folder(directory) where you cloned the repository. <br/>
-3. Using CMD or terminal change your directory into the folder(directory) where you cloned the repository
+
+3. Using CMD or terminal change your directory into the folder(directory) where you cloned the repository <br/>
 ```
 cd "Folder with your repository"
 
