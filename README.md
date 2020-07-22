@@ -13,7 +13,7 @@ We trust that this message finds you well!</br>
 
 1. Clone or download the repository at [Project-Distributed-Production-System-V2](https://github.com/Distributed-Production/Project-Distributed-Production-System-V2).<br/>
 
-#### Hint: Hover over and click on the green clone button
+#### Hint: Hover over and click on the green(Code) button
 ![Image Provided](https://github.com/Distributed-Production/Project-Distributed-Production-System-V2/blob/master/Clone.PNG)
 
 2. In your local machine. Open the folder(directory) where you cloned the repository. <br/>
@@ -30,9 +30,8 @@ npm fund
 node index.js
 
 ```
-5. Hover over the link to the port or simply go to  [port](http://localhost:8080)
+5. Hover over the link to the port or simply go to  [port](http://localhost:8080) to interact with our web app.
 ```
 Your Web app is listening on port http://localhost:8080
 
 ```
-
