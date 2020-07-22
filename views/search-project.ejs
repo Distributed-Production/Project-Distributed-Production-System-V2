@@ -1,0 +1,32 @@
+<%- include('header') -%>
+    <link rel="stylesheet" href="assets/css/proj.css">
+
+
+    <body style=" background-image: url(../images/g.jpg);">
+
+        <section style="position: absolute; top: 20%; background-image: url(../images/g.jpg);" class="display-images">
+            <ul>
+                <% data.forEach(element => { %>
+                    <li style="width: 32%; margin: 20px auto; padding: 10px; display: inline-block;">
+                        <div class="">
+                            <img src="assets/images/tea.jpg" alt="" style="width: 100%">
+                            <div class="project-details">
+                                <h2 style=" font-family: 'Julius Sans One', sans-serif; background-color: orange; color:white; padding: 14px;" class="project-title">
+                                    <%= element.proj_name %> PROJECT</h2>
+                                <h3 style=" font-family: roboto; font-weight: bold; " class="project-location">
+                                    <%= element.proj_location %>
+                                </h3>
+                                <p style="font-family:Arial, Helvetica, sans-serif; line-height: 1.6em; color:grey" class="project-description">
+                                    <%=(element.proj_brief).substring(0, 130)%>...
+                                </p>
+                                <p style="line-height: 1.8em; font-size: 0.8em;" class="small">Click on link to learn more about the project</p>
+
+                                <p class="link"><a class="project-link" href="/ourprojects/<%= element._id %> ">All about this project>></a></p>
+                            </div>
+                        </div>
+                    </li>
+                    <% }); %>
+
+    </body>
+
+    <%- include('footer') -%>

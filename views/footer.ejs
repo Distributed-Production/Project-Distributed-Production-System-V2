@@ -1,0 +1,22 @@
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script type="text/javascript" src="assets/js/signup.js"></script>
+<script type="text/javascript" src="assets/js/search.js"></script>
+
+
+
+<script>
+    function signup() {
+        window.location.href = "/signup"
+    }
+
+    function searchvar() {
+        const search_term = $("#search").val()
+            // alert(search_term)
+
+        window.location.href = `/search-project/${search_term}`
+    }
+</script>
+</body>
+
+</html>

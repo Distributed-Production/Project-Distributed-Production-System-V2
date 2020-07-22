@@ -1,0 +1,75 @@
+<%- include('header') -%>
+    <link rel="stylesheet" href="assets/css/padmin.css">
+    <main class="sec">
+
+        <div class="input">
+            <form class="input_form"><br><br><br><br><br><br>
+                <label for="project">Project Name<br></label>
+                <input type="text" id="project-name" name="project" class="input"><br>
+                <label for="location">Project Location<br></label>
+                <input type="text" id="project-location" name="location" class="input"><br>
+                <label for="des">Project Brief Description<br></label>
+                <textarea name="des" id="project-brief"></textarea><br>
+                <label for="just">Project Justification<br></label>
+                <textarea id="project-justification" name="just"></textarea><br>
+                <label for="brief">Project Description<br></label>
+                <textarea name="brief" id="project-description" style="height: 200px;"></textarea><br>
+                <button id="send" class="add-proj">Add Project</button>
+            </form>
+        </div>
+        <main>
+            <div class="fill">
+                <p>Fill In Project Details </p>
+            </div>
+            <div id="response"></div>
+
+            <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+            <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+            <script type="text/javascript" src="assets/js/signup.js"></script>
+            <script>
+                $(function() {
+                    $("#send").click(function(ev) {
+                        ev.preventDefault()
+                        var proj_name = $("#project-name").val(),
+                            proj_location = $("#project-location").val(),
+                            proj_description = $("#project-description").val(),
+                            proj_brief = $("#project-brief").val(),
+                            proj_justification = $("#project-justification").val()
+
+                        $.ajax({
+                            method: "POST",
+                            url: 'http://localhost:2077/api/create-project',
+                            data: JSON.stringify({
+                                proj_name: proj_name,
+                                proj_location: proj_location,
+                                proj_brief: proj_brief,
+                                proj_justification: proj_justification,
+                                proj_description: proj_description
+                            }),
+                            dataType: 'json',
+                            contentType: 'application/json',
+                            success: function(resp) {
+                                if (resp.code == 1) {
+                                    $("#project-name").val('')
+                                    $("#project-location").val('')
+                                    $("#project-description").val('')
+                                    $("#project-brief").val('')
+                                    $("#project-justification").val('')
+
+                                    $("#response").html("<p class='alert alert-success'>" + resp.message + "</p>")
+                                } else {
+                                    $("#response").html("<p class='alert alert-danger'>" + resp.message + "</p>")
+                                }
+                                console.log(resp)
+                            },
+                            error: function(error) {
+                                console.log(error)
+                            }
+                        })
+
+                    })
+                })
+            </script>
+            </body>
+
+            </html>

@@ -1,0 +1,504 @@
+    * {
+        box-sizing: border-box;
+    }
+    
+    body {
+        margin: 0;
+        background-color: rgb(249, 249, 249);
+    }
+    
+    .projects {
+        position: absolute;
+        left: 10px;
+        top: 0;
+        border-right: none;
+        padding-right: 10px;
+    }
+    
+    footer {
+        background-color: #228B22;
+        width: 100%;
+        left: 0;
+        height: 50px;
+        bottom: 0;
+    }
+    
+    .main-side {
+        width: 100%;
+        left: 0;
+        /* top: 40%; */
+    }
+    
+    .main img {
+        left: 0;
+        width: 1270px;
+        margin: 0;
+        background-size: cover;
+    }
+    
+    .main1 {
+        font-family: 'Julius Sans One', sans-serif;
+        text-align: center;
+        text-transform: uppercase;
+        font-weight: bold;
+        background-color: white;
+        margin-top: 0;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        margin-bottom: 0;
+    }
+    
+    .main1 h3 {
+        border-bottom: 1px dashed rgb(150, 150, 150);
+        padding-bottom: 25px;
+    }
+    
+    .main1 h1 {
+        color: orange;
+    }
+    
+    .images ul li {
+        list-style-type: none;
+        display: inline-block;
+        float: left;
+        padding-right: 20px;
+        padding-left: 0;
+    }
+    
+    .side {
+        position: relative;
+        background-color: white;
+        top: 130px;
+        left: 20px;
+        width: 45%;
+        margin-right: 0;
+        padding-right: 0;
+        font-family: 'Julius Sans One', sans-serif;
+        border-radius: 0;
+        margin: 0;
+    }
+    
+    .side h4 {
+        text-align: right;
+        background-color: orange;
+        color: white;
+        padding: 10px;
+        width: 20%;
+    }
+    
+    ul.sidel a {
+        text-decoration: none;
+        color: black;
+    }
+    
+    ul.sidel li {
+        width: 200px;
+        margin-top: 3px;
+        color: black;
+        text-align: left;
+        cursor: pointer;
+        margin: 0;
+        padding: 0;
+        border: none;
+        list-style-type: none;
+        padding-right: 10px;
+        padding-left: 10px;
+        padding-top: 10px;
+        padding-bottom: 5px;
+        display: inline-block;
+        z-index: -2;
+    }
+    
+    ul.sidel li:first-child {
+        padding-top: 0;
+    }
+    
+    ul.sidel li:hover {
+        border-bottom: 2px solid green;
+    }
+    
+    .images_text ul li {
+        list-style-type: none;
+        display: inline-block;
+        float: left;
+        padding-right: 20px;
+        padding-left: 0;
+    }
+    
+    .images_text {
+        position: absolute;
+    }
+    
+    .tea {
+        position: absolute;
+        bottom: 0px;
+        top: 1130px;
+        left: 63px;
+        background-color: white;
+        width: 320px;
+        height: 300px;
+        display: block;
+        padding: 0 20px;
+        font-family: 'Julius Sans One', sans-serif;
+    }
+    
+    .tea h5 {
+        font-family: 'Abel', sans-serif;
+        font-size: 18px;
+    }
+    
+    .tea h3 {
+        background-color: orange;
+        color: white;
+        padding: 16px;
+    }
+    
+    .banana {
+        position: absolute;
+        bottom: 0px;
+        top: 1130px;
+        left: 460px;
+        background-color: white;
+        width: 320px;
+        height: 300px;
+        display: block;
+        padding: 0 20px;
+        font-family: 'Julius Sans One', sans-serif;
+    }
+    
+    .banana h5 {
+        font-family: 'Abel', sans-serif;
+        font-size: 18px;
+    }
+    
+    .banana h3 {
+        background-color: orange;
+        color: white;
+        padding: 16px;
+    }
+    
+    .maize {
+        position: absolute;
+        bottom: 0px;
+        top: 1130px;
+        left: 880px;
+        background-color: white;
+        width: 320px;
+        height: 300px;
+        display: block;
+        padding: 0 20px;
+        font-family: 'Julius Sans One', sans-serif;
+    }
+    
+    .maize h5 {
+        font-family: 'Abel', sans-serif;
+        font-size: 18px;
+    }
+    
+    .maize h3 {
+        background-color: orange;
+        color: white;
+        padding: 16px;
+    }
+    
+    .main2 {
+        position: absolute;
+        top: 1470px;
+        left: 500px;
+        font-family: 'Julius Sans One', sans-serif;
+    }
+    
+    .container {
+        background-image: url(images/flower.jpg);
+        position: relative;
+        top: 0;
+        width: 100%;
+        height: 600px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        z-index: -1;
+    }
+    
+    .form2 select,
+    textarea {
+        width: 300px;
+        padding: 12px;
+        border: 1px solid green;
+        border-radius: 1px;
+        box-sizing: border-box;
+        margin-top: 3px;
+        margin-bottom: 10px;
+        resize: vertical;
+        background-color: none;
+        font-size: 12px;
+        margin-bottom: 18px;
+    }
+    
+    .moreprojects {
+        padding: 40px;
+        font-family: 'Julius Sans One', sans-serif;
+        text-align: center;
+    }
+    
+    input[type=submit] {
+        background-color: #45a049;
+        color: white;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 2px;
+        cursor: pointer;
+        width: 300px;
+    }
+    
+    .hor {
+        position: absolute;
+        top: 0;
+        left: 30px;
+    }
+    
+    input[type=submit]:hover {
+        background-color: #dda304;
+    }
+    
+    .container {
+        border-radius: 5px;
+        background-color: #f2f2f2;
+        padding: 20px;
+    }
+    
+    .class2 {
+        position: absolute;
+        right: 30px;
+        background-color: rgba(255, 255, 255, 0.7);
+        padding: 20px;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        color: black;
+    }
+    
+    .soon {
+        position: absolute;
+        top: 0;
+        left: 740px;
+    }
+    
+    .look {
+        position: absolute;
+        background-color: rgb(0, 100, 0);
+        color: white;
+        padding: 5px;
+        left: 380px;
+        top: 470px;
+        padding-right: 10px;
+        padding-left: 13px;
+        font-family: 'Julius Sans One', sans-serif;
+    }
+    
+    .footer {
+        position: absolute;
+        top: 2150px;
+        width: 100%;
+        background-color: rgb(100, 100, 100);
+        height: 100px;
+    }
+    
+    .footer p {
+        text-align: center;
+        color: white;
+        padding-top: 20px;
+    }
+    /*styling modal login form*/
+    
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    /* Full-width input fields */
+    
+    .form2 input[type=text],
+    .form2 input[type=password] {
+        /* width: 100%; */
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        box-sizing: border-box;
+    }
+    /* Set a style for all buttons */
+    
+    button {
+        background-color: #4CAF50;
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        cursor: pointer;
+        width: 100%;
+    }
+    
+    button:hover {
+        opacity: 0.8;
+    }
+    /* Extra styles for the cancel button */
+    
+    .cancelbtn {
+        width: auto;
+        padding: 10px 18px;
+        background-color: #f44336;
+    }
+    /* Center the image and position the close button */
+    
+    .imgcontainer {
+        text-align: center;
+        margin: 24px 0 12px 0;
+        position: relative;
+    }
+    
+    img.avatar {
+        width: 40%;
+        border-radius: 50%;
+    }
+    
+    .container {
+        padding: 16px;
+    }
+    
+    span.psw {
+        float: right;
+        padding-top: 16px;
+    }
+    /* The Modal (background) */
+    
+    .modal {
+        display: none;
+        /* Hidden by default */
+        position: fixed;
+        /* Stay in place */
+        z-index: 1;
+        /* Sit on top */
+        left: 0;
+        top: 0;
+        width: 100%;
+        /* Full width */
+        height: 100%;
+        /* Full height */
+        overflow: auto;
+        /* Enable scroll if needed */
+        background-color: rgb(0, 0, 0);
+        /* Fallback color */
+        background-color: rgba(0, 0, 0, 0.4);
+        /* Black w/ opacity */
+        padding-top: 60px;
+    }
+    /* Modal Content/Box */
+    
+    .modal-content {
+        background-color: #fefefe;
+        margin: 5% auto 15% auto;
+        /* 5% from the top, 15% from the bottom and centered */
+        border: 1px solid #888;
+        width: 80%;
+        /* Could be more or less, depending on screen size */
+    }
+    /* The Close Button (x) */
+    
+    .close {
+        position: absolute;
+        right: 25px;
+        top: 0;
+        color: #000;
+        font-size: 35px;
+        font-weight: bold;
+    }
+    
+    .close:hover,
+    .close:focus {
+        color: red;
+        cursor: pointer;
+    }
+    /* Add Zoom Animation */
+    
+    .animate {
+        -webkit-animation: animatezoom 0.6s;
+        animation: animatezoom 0.6s;
+    }
+    
+    span.psw {
+        display: block;
+        float: none;
+    }
+    
+    .cancelbtn {
+        width: 100%;
+    }
+    /*styling the fetched data*/
+    
+    .project-title {
+        background: orange;
+        padding: 10px;
+        color: #fff;
+        text-align: center;
+        font-family: 'Julius Sans One', sans-serif;
+        position: relative;
+        top: -43px;
+        margin-bottom: 0;
+    }
+    
+    .project-location {
+        margin-top: 0;
+        text-align: center;
+        color: rgb(0, 100, 0);
+        text-transform: uppercase;
+        position: relative;
+        top: -32px;
+    }
+    
+    .project-details {
+        background: #fff;
+        padding: 8px;
+        z-index: -1;
+    }
+    
+    .project-description {
+        position: relative;
+        top: -33px;
+        color: #403f3f;
+        font-family: roboto;
+        font-size: 15;
+        padding: 10px;
+        padding-top: 0;
+        padding-bottom: 0;
+        text-align: left;
+        display: block;
+        /* text-align: justify; */
+        /* -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    /* overflow: hidden; */
+        /* text-overflow: ellipsis;
+    height: 7%;
+    word-wrap: break-word;*/
+        line-height: 1.6em;
+        /* white-space: nowrap; */
+        /* width: 100%;  */
+    }
+    
+    .project-link {
+        text-decoration: none;
+        color: white;
+        font-family: 'arial' non-serif;
+        font-size: 0.9em;
+        padding: 30px;
+        padding-top: 7;
+        padding-bottom: 7;
+        background-color: green;
+        width: 100%;
+        margin-left: 10px;
+    }
+    
+    p .link {
+        text-align: right !important;
+    }
+    
+    .small {
+        font-size: .8em;
+        color: gray;
+        padding-left: 20px;
+    }

@@ -1,0 +1,129 @@
+<html>
+
+<head>
+
+    <title> projects</title>
+    <link href="https://fonts.googleapis.com/css2?family=Pontano+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Abel&family=Julius+Sans+One&family=M+PLUS+1p:wght@300&family=Montserrat:wght@100&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/header.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <meta charset="UTF-8">
+    <meta name="description" content="Distributed system">
+    <meta name="keywords" content="tea,coffee,flowers, bananas">
+    <meta name="author" content="Pashie">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="assets/favicon.png" type="image/x-icon">
+
+    <style>
+        .header {
+            margin: 0;
+            position: absolute;
+            width: 100%;
+            top: 8%;
+            background-color: white;
+            z-index: 2;
+            height: 11.5%;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+        /* #search {
+            /* padding-top: 26px; 
+            padding-left: 16%;
+            position: absolute;
+            top: 35%;
+        }
+        
+        #search input {
+            color: rgba(150, 150, 150, 0.3);
+            height: 37px;
+            background-color: white;
+            border: 1px solid green;
+            padding-right: 220px;
+        }
+        
+        #search input li:hover {
+            border: none;
+        }
+         */
+        
+        .nav .align-right {
+            float: right;
+            /* margin-right: 3%; */
+            padding-left: 0;
+            /* padding-top: 20px; */
+        }
+        
+        .nav .align-right li {
+            padding: 5px;
+            position: relative;
+            padding-top: 31px;
+            padding-bottom: 20px;
+            padding-left: 10px;
+        }
+        
+        .header .nav .align-right li:hover {
+            border-bottom: 3px solid orange;
+        }
+        
+        */ .nav .align-right li a {
+            text-align: right;
+        }
+        
+        .header .nav li {
+            list-style: none;
+            display: inline-block;
+        }
+        
+        .nav {
+            margin-left: 0;
+            padding: 0;
+            margin-top: 0;
+        }
+        
+        form .nav {
+            position: absolute;
+            top: 0;
+        }
+        
+        .btn-submit {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="top_up">
+        <p class="kenya">Kenya, AFRICA </p>
+        <p>Welcome to M-Project >> </p>
+        <p class="talk"> Talk to us: <span style="color: orange; font-family: roboto;">mproject@gmail.com<span> </p>
+    </div>
+
+    <div class="header">
+        <ul class="nav">
+            <li><img src="assets/images/mat.jpg" style="width: 130px; height: 71px; top: 0; position: absolute;"></li>
+            <i onclick="searchvar()" style="position: relative; padding-top: 35px;"
+                class="fa fa-search search_icon"></i>
+            <li><input type="text" id="search" style="color: rgba(150, 150, 150, 1);
+                    height: 37px;
+                    background-color: white;
+                    border: 1px solid green;
+                   left: 17.5%; padding-right:5px;
+            position: absolute; text-align: left; margin-left: 0; top: 34%; width: 35%; padding-left: 7px;
+          " name="search" placeholder="search by project name or location..."></li>
+
+            <span class="align-right">
+                <li class="active1"> <a href="/"> Go back Home</a></li>
+                <li> <a href="/projects"> Projects</a></li>
+                <%  if (session && session !== null) { %>
+                    <li> <a href="/member"> User Profile</a></li>
+                <li> <a href="/logout"> Log Out</a></li>
+                
+                <%   } else  { %>
+                <li> <a href="/signup">Sign Up</a></li>
+                <li><a href="/login"> Log In</a></li>
+                <%  } %>
+            </span>
+            </ul>
+    </div>
+    <%- include('footer') -%>

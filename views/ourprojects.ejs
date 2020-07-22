@@ -1,0 +1,190 @@
+<%- include('header') -%>
+    <link rel="stylesheet" href="../assets/css/newproj.css">
+
+    <div class="project_table">
+
+        <h2 style="width: 80%; position: relative; left: 5%;" class="info">
+            <%= data.proj_name%> PROJECT INFORMATION</h2>
+
+        <div class="information" style="width: 80%; height:auto; margin-left: 10%; padding: 20px; line-height: 23px;">
+            <div class="description">
+                <h3 style="padding: 10px; color: white; width:20%; background-color: green; padding-left: 40px; font-size: large; font-family: roboto; font-weight: bold;">PROJECT NAME:</h3>
+                <p style="text-transform: uppercase; font-weight:900; font-family:roboto; margin-left: 3%; margin-top:0;">
+                    <%= data.proj_name %> PROJECT
+                </p>
+                <h3 style="padding: 10px; color: white; width:24%; background-color: green; padding-left: 40px; font-size: large; font-family: roboto; font-weight: bold;">PROJECT LOCATION:</h3>
+                <p style="text-transform: uppercase; font-weight:900; font-family:roboto; margin-left: 3%; margin-top:0;">
+                    <%= data.proj_location %>
+                </p>
+                <h3 style="padding: 10px; margin-bottom:0; color: white; width:33%; background-color: green; padding-left: 40px; font-size: large; font-family: roboto; font-weight: bold;">PROJECT BRIEF INFORMATION:</h3>
+                <p style="font-family:roboto; border: 1px solid black; padding: 20px; margin-top:0; margin-top:0; background-color: rgba(255,255,255,0.5);">
+                    <%= data.proj_brief %>
+                </p>
+                <h3 style="padding: 10px; margin-bottom:0; color: white; width:33%; background-color: green; padding-left: 40px; font-size: large; font-family: roboto; font-weight: bold;">PROJECT JUSTIFICATION:</h3>
+                <p style="font-family:roboto; border: 1px solid black; padding: 20px; margin-top:0; background-color: rgba(255,255,255,0.5);">
+                    <%= data.proj_justification %>
+                </p>
+                <h3 style="padding: 10px; color: white; width:33%; background-color: green; padding-left: 40px; margin-bottom: 0; font-size: large; font-family: roboto; font-weight: bold;">PROJECT FULL DESCRIPTION:</h3>
+                <p style="font-family:roboto; border: 1px solid black; padding: 20px; margin-top:0; background-color: rgba(255,255,255,0.5);">
+                    <%= data.proj_description %>
+                </p>
+            </div>
+
+            <h3>PROJECT PROPOSED MEMBERS</h3>
+            <table>
+                <tr>
+                    <th>Member ID</th>
+                    <th>Location</th>
+                    <th>Position</th>
+                    <th>Position Description</th>
+                </tr>
+                <% members_data.forEach(element =>{ %>
+                    <tr>
+                        <td>
+                            <%= uid %>
+                        </td>
+                        <td>
+                            <%= element.mem_location%>
+                        </td>
+                        <td>
+                            <%= element.mem_position%>
+                        </td>
+                        <td>
+                            <%= element.pos_description%>
+                        </td>
+                    </tr>
+                    <% }) %>
+                        <!-- <tr>
+                    <td>Centro comercial Moctezuma</td>
+                    <td>Francisco Chang</td>
+                    <td>Mexico</td>
+                    <td>Germany</td>
+                </tr>
+                <tr>
+                    <td>Ernst Handel</td>
+                    <td>Roland Mendel</td>
+                    <td>Austria</td>
+                    <td>Germany</td>
+                </tr>
+                <tr>
+                    <td>Island Trading</td>
+                    <td>Helen Bennett</td>
+                    <td>UK</td>
+                    <td>Germany</td>
+                </tr>
+                <tr>
+                    <td>Laughing Bacchus Winecellars</td>
+                    <td>Yoshi Tannamuri</td>
+                    <td>Canada</td>
+                    <td>Germany</td>
+                </tr>
+                <tr>
+                    <td>Magazzini Alimentari Riuniti</td>
+                    <td>Giovanni Rovelli</td>
+                    <td>Italy</td>
+                    <td>Germany</td>
+
+                </tr> -->
+            </table>
+
+        </div>
+
+    </div>
+    <button class="open-button" onclick="openForm()">Join This Current Project</button>
+
+    <div class="form-popup" id="myForm">
+        <form class="form-container">
+            <h3 style="color: green;">Join Project</h3>
+
+            <label for="names">Full Names</label>
+            <input type="text" id="name" placeholder="Enter full names" name="names" required>
+            <label for="location">Location</label>
+            <input type="text" id="location" placeholder="Enter location" name="location" required><br>
+            <input type="text" hidden id="projectid" disabled placeholder="Enter full names" name="projectid" value="<%= data._id  %>" required>
+            <input type="text" hidden id="member_id" placeholder="Enter full names" name="member_id" value="<%= uid %>" required>
+
+            <label for="position">Position:<br></label>
+            <select id="position" class="position" name="position">
+                <option value="Marketer">Investor</option>
+                <option value="Land Owner">Land Owner</option>
+                <option value="Farmer">Farmer</option>
+                <option value="Marketer">Harvester</option>
+                <option value="Marketer">Marketer</option>
+                <option value="Marketer">Transport</option>
+                <option value="Marketer">Buyer</option>
+                <option value="Marketer">Others</option>
+            </select><br>
+
+            <label for="subject">More information:<br></label>
+            <textarea id="memdes" name="subject" placeholder="Write more about desired position.." style="height:100px; width: 100%"></textarea>
+
+            <button type="submit" id="send" class="btn">Join</button>
+            <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+        </form>
+    </div>
+
+    <div id="response"></div>
+
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+    <script type="text/javascript" src="assets/js/signup.js"></script>
+    <script>
+        $(function() {
+            $("#send").click(function(ev) {
+                ev.preventDefault()
+                var mem_name = $("#name").val(),
+                    mem_position = $("#position").val(),
+                    mem_location = $("#location").val(),
+                    pos_description = $("#memdes").val()
+                user_id = $("#userid").val(),
+                    proj_id = $("#projectid").val(),
+                    member_id = $("#member_id").val()
+
+                $.ajax({
+                    method: "POST",
+                    url: 'http://localhost:2077/api/create-member',
+                    data: JSON.stringify({
+                        mem_name: mem_name,
+                        mem_position: mem_position,
+                        mem_location: mem_location,
+                        pos_description: pos_description,
+                        proj_id: proj_id,
+                        member_id: member_id
+
+                    }),
+                    dataType: 'json',
+                    contentType: 'application/json',
+                    success: function(resp) {
+                        if (resp.code == 1) {
+                            $("#mem_name").val('')
+                            $("#pos-description").val('')
+                            $("#mem_position").val('')
+                            $("#mem_location").val('')
+
+                            $("#response").html("<p class='alert alert-success'>" + resp.message + "</p>")
+                        } else {
+                            $("#response").html("<p class='alert alert-danger'>" + resp.message + "</p>")
+                        }
+                        console.log(resp)
+                    },
+                    error: function(error) {
+                        console.log(error)
+                    }
+                })
+
+            })
+        })
+
+        function openForm() {
+            document.getElementById("myForm").style.display = "block";
+        }
+
+        function closeForm() {
+            document.getElementById("myForm").style.display = "none";
+        }
+    </script>
+
+    </body>
+
+    </html>

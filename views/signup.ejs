@@ -1,0 +1,106 @@
+<%- include('header') -%>
+    <link rel="stylesheet" href="assets/css/signup.css">
+    <script src="assets/js/signup.js"></script>-->
+
+    <body style="background-image: url(assets/images/2.jpg); background-repeat: no-repeat; background-size: cover;"></body>
+    <!-- multistep form -->
+    <form id="msform">
+        <!-- progressbar -->
+        <ul id="progressbar">
+            <li class="fifa">Account Setup</li>
+            <li>Social Profiles</li>
+            <li>Personal Details</li>
+        </ul>
+        <!-- fieldsets -->
+        <fieldset>
+            <h2 class="fs-title">Create your account</h2>
+            <h3 class="fs-subtitle">Fill in your details</h3>
+            <input type="text" name="email" id="email" placeholder="Email">
+            <input type="password" name="pass" id="pword" placeholder="Password">
+            <input type="password" name="cpass" id="cpass" placeholder="Confirm Password">
+            <input type="button" name="next" class="next action-button" value="Next">
+        </fieldset>
+        <fieldset>
+            <h2 class="fs-title">Social Profiles</h2>
+            <h3 class="fs-subtitle">Your social networks accounts</h3>
+            <input type="text" name="twitter" id="twit" placeholder="Twitter">
+            <input type="text" name="facebook" id="fbook" placeholder="Facebook">
+            <input type="text" name="ig" id="ig" placeholder="Instagram">
+            <input type="button" name="previous" class="previous action-button" value="Previous">
+            <input type="button" name="next" class="next action-button" value="Next">
+        </fieldset>
+        <fieldset>
+            <h2 class="fs-title">Personal Details</h2>
+            <h3 class="fs-subtitle">Your Personal Details</h3>
+            <input type="text" name="fname" id="fname" placeholder="First Name" />
+            <input type="text" name="lname" id="lname" placeholder="Last Name" />
+            <input type="text" name="phone" id="phone" placeholder="Phone" />
+            <textarea name="address" id="address" placeholder="Address" style="height: 50px" ;></textarea>
+            <input type="button" name="previous" class="previous action-button" value="Previous" />
+            <input type="submit" id="send" name="submit" class="submit action-button" value="Submit" />
+        </fieldset>
+    </form>
+    <h6 id="response"> </h6>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+    <script type="text/javascript" src="assets/js/signup.js"></script>
+    <!-- <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script> -->
+    <script>
+        $(function() {
+            $("#send").click(function(ev) {
+                ev.preventDefault()
+                var email = $("#email").val(),
+                    password = $("#pword").val(),
+                    confirm_password = $("#cpass").val(),
+                    twitter = $("#twit").val(),
+                    facebook = $("#fbook").val(),
+                    instagram = $("#ig").val(),
+                    first_name = $("#fname").val(),
+                    last_name = $("#lname").val(),
+                    phone_number = $("#phone").val(),
+                    address = $("#address").val()
+
+                $.ajax({
+                    method: "POST",
+                    url: 'http://localhost:2077/api/create-user',
+                    data: JSON.stringify({
+                        email: email,
+                        password: password,
+                        confirm_password: confirm_password,
+                        facebook: facebook,
+                        twitter: twitter,
+                        instagram: instagram,
+                        first_name: first_name,
+                        last_name: last_name,
+                        phone_number: phone_number,
+                        address: address
+                    }),
+                    dataType: 'json',
+                    contentType: 'application/json',
+                    success: function(resp) {
+                        if (resp.code == 1) {
+                            $("#email").val('')
+                            $("#pword").val('')
+                            $("#cpass").val('')
+                            $("#twit").val('')
+                            $("#fbook").val('')
+                            $("#ig").val('')
+                            $("#fname").val('')
+                            $("#lname").val('')
+                            $("#phone").val('')
+                            $("#address").val('')
+                            $("#response").html("<p class='alert alert-success'>" + resp.message + "</p>")
+                        } else {
+                            $("#response").html("<p class='alert alert-danger'>" + resp.message + "</p>")
+                        }
+                        console.log(resp)
+                    },
+                    error: function(error) {
+                        console.log(error)
+                    }
+                })
+
+            })
+        })
+    </script>
+    <%- include('footer') -%>

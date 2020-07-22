@@ -1,0 +1,116 @@
+<%- include('header') -%>
+    <link rel="stylesheet" href="assets/css/proj.css">
+
+
+    <!-- <div class="main-side"> -->
+
+    <div class="side">
+        <h4>Categories</h4>
+        <ul class="sidel">
+            <li><a href="#">Tea Project</a> </li>
+            <li><a href="#"> Coffee Project</a></li>
+            <li><a href="#">Bananas Project</a></li>
+            <li><a href="#">Beans Project</a></li>
+            <li><a href="#"> Maize Project</a></li>
+            <li><a href="#"> Potatoes Project</a></li>
+            <li><a href="#"> Upcoming Projects</a></li>
+            <li><a href="#"> Farm Equipments</a></li>
+        </ul>
+    </div>
+
+    <!-- </div> -->
+
+    <div class="main1">
+        <p style="text-align: right; font-family: roboto; font-weight: bold; color: rgb(131, 4, 103); margin-right: 6%; margin-bottom: 0; ">
+            Welcome back
+            <span style="text-transform: lowercase; color:rgb(63, 44, 3); "><%= session %></span>
+        </p>
+        <h1 style="text-align: right; margin-right: 16%; background-color: rgb(0,100,0); color: white; padding: 20px;"> THE ONGOING PROJECTS</h1>
+
+    </div>
+    <section class="display-images">
+        <ul>
+            <% data.forEach(element => { %>
+                <li style="width: 32%; margin: 20px auto; padding: 10px; display: inline-block;">
+                    <div class="">
+                        <img src="assets/images/tea.jpg" alt="" style="width: 100%">
+                        <div class="project-details">
+                            <h3 class="project-title">
+                                <%= element.proj_name %> PROJECT</h3>
+                            <h4 class="project-location">
+                                <%= element.proj_location %>
+                            </h4>
+                            <p class="project-description">
+                                <%=(element.proj_brief).substring(0, 130)%>...
+                            </p>
+                            <p class="small">Click on link to learn more about the project</p>
+
+                            <p class="link"><a class="project-link" href="/ourprojects/<%= element._id %> ">All about this project>></a></p>
+                        </div>
+                    </div>
+                </li>
+                <% }); %>
+                    <div class="assets/images_text">
+        </ul>
+        </div><br><br>
+        <hr>
+    </section>
+
+
+    <div class="">
+        <h3 class="moreprojects"> MORE UPCOMING PROJECTS</h3>
+    </div>
+    <div style="position: absolute; right: 5%; top:1760px;" class="suggest">
+        <form class="form2" method="POST">
+            <label for="fname" style="color: white; background-color: orange; padding-bottom: 10px; padding-top:20px; padding-left:7px; padding-right:7px; font-family: cursive; font-variant: small-caps;">
+        Fill in to suggest a Project >><br></label><br>
+            <label for="fname">Full Name:<br></label>
+            <input type="text" id="fname" name="firstname" placeholder="Your name.."><br>
+
+            <label for="lname">Email:<br></label>
+            <input type="text" id="lname" name="lastname" placeholder="example@com.."><br>
+
+            <label for="country">Position:<br></label>
+            <select id="country" name="country">
+        <option value="Marketer">Investor</option>
+        <option value="Land Owner">Land Owner</option>
+        <option value="Farmer">Farmer</option>
+        <option value="Marketer">Harvester</option>
+        <option value="Marketer">Marketer</option>
+        <option value="Marketer">Transport</option>
+        <option value="Marketer">Buyer</option>
+        <option value="Marketer">Others</option>
+    </select><br>
+
+            <label for="subject">More information:<br></label>
+            <textarea id="subject" name="subject" placeholder="Write more about suggested project.." style="height:140px"></textarea>
+
+            <br><input type="submit" value="Submit">
+        </form>
+    </div>
+    <section>
+
+        <div class="container" style="background-image: url(assets/images/flower.jpg);">
+
+            <div class="hor">
+                <img src="assets/images/crop.jpg" alt="" style="width:800px; height: 500px;">
+                <div class="overlay">
+                    <div class="text"></div>
+                </div>
+            </div>
+            <div class="soon">
+                <img src="assets/images/com.png" alt="" style="width:150px; height: 150px;" class="image">
+            </div>
+            <div class="look">
+                <p>Sign up to receive updates on new upcoming project</p>
+            </div>
+
+
+        </div>
+    </section>
+
+    <div class="" style="background-color: rgb(3, 63, 3); height:20%; width: 100%;">
+        <p style="color: white; margin-top: 0; text-align: center; padding-top: 20px;"> Copyright 2020</p>
+    </div>
+
+    <%- include('footer') -%>

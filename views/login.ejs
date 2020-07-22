@@ -1,0 +1,38 @@
+<%- include('header') -%>
+    <link rel="stylesheet" href="assets/css/login.css">
+
+    <body style="background-image: url(assets/images/2.jpg); background-repeat: no-repeat; background-size: cover;"></body>
+    <div id="id01" class="modal">
+        <form class="modal-content animate" method="POST" action="/login">
+            <div class="imgcontainer">
+                <img src="assets/images/ava5.png" alt="Avatar" class="avatar">
+            </div>
+            <p id="response">
+
+            </p>
+            <div class="container">
+                <label for="uname"><b>Email</b></label>
+                <input type="text" id="email" placeholder="Enter Email" name="email" required>
+
+                <div class="password-between"> <label for="psw"><b>Password</b></label>
+                    <input type="password" id="password" placeholder="Enter Password" name="password" required></div>
+
+                <button id="send" type="submit">Login</button>
+                <label>
+        <input type="checkbox" checked="checked" name="remember"> Remember me
+      </label>
+            </div>
+
+            <div class="container">
+                <span class="psw">Forgot <a href="#" style="color: orange">password?</a></span>
+            </div>
+        </form>
+    </div>
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+    <script type="text/javascript" src="assets/js/signup.js"></script>
+    <!-- <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script> -->
+    <script>
+    </script>
+    <%- include('footer') -%>

@@ -1,0 +1,237 @@
+<%- include('header') -%>
+    <link rel="stylesheet" href="assets/css/userProfile.css">
+    <!-- <link rel="stylesheet" href="assets/css/signup.css"> -->
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        
+        .column {
+            float: left;
+            padding: 10px;
+            height: 700px;
+        }
+        
+        .phone input {
+            width: 260px;
+            height: 30px;
+            border: none;
+            background-color: white;
+            padding: 10px;
+        }
+        
+        .phone ul li {
+            display: inline-block;
+        }
+        
+        .left {
+            width: 25%;
+        }
+        
+        .iinput_form ul li {
+            list-style-type: none;
+        }
+        
+        .right {
+            width: 25%;
+        }
+        
+        .middle {
+            width: 50%;
+        }
+        /* Clear floats after the columns */
+        
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+        
+        .add-proj {
+            padding: 12px;
+            position: absolute;
+            left: 60%;
+            top: 106%;
+            background-color: orange;
+        }
+        
+        table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+            background-color: white;
+        }
+        
+        td,
+        th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+        
+        th {
+            font-family: 'Julius Sans One', sans-serif;
+            color: rgb(0, 100, 0);
+        }
+        
+        tr:nth-child(even) {
+            background-color: #dddddd;
+        }
+    </style>
+    <div>
+        <img style="width:100%; height: 350px;" src="assets/images/member.jpg" alt="topgreen" class="membertop">
+        <div style="font-family: roboto; color:white; font-weight: bolder; font-size: 1.4em; position:absolute; top: 48%; left: 19%;">KAREN OKOTH
+
+        </div>
+    </div>
+    <div class="phone" style=" position: absolute; top: 49%;right: 1%; font-family: roboto;">
+        <ul style="list-style-type: none; ">
+            <li style="font: bolder; text-shadow: 2px 2px 4px #000000; color:white"> Enter your Registered Phone Number:</li>
+            <li> <input type="text" name="phon" id="phon" placeholder="+2547........ "> </li>
+            <li><button style="width:70px; height:30px; background-color: orange;">Confirm</button></li>
+        </ul>
+    </div>
+    <!-- <p> user profile</p><br><br><br><br><br><br>
+    <p>hello world</p>-->
+    <img style="position: absolute; top:30%; left: 5%; width: 13%; height:200px;" src="assets/images/her.png" alt="Avatar" class="avatar">
+    <div class="row">
+        <div class="column left">
+            <!-- <h2 style="color: white;">Column 1</h2> -->
+            <br>
+            <!-- <p style="padding-left: 7%;">Some text..</p> --><br>
+            <h3 style="font-family: 'Julius Sans One', sans-serif; color:green; padding-left: 14%;"> USER PROFILE</h3>
+            <form class="iinput_form" style="padding: 0;">
+                <ul>
+                    <li id="name1d">First Name:</li>
+                    <li id="name2d">Last Name:</li>
+                    <li id="phone1d">Phone Number:</li>
+                    <li id="emaild">Email:</li>
+                    <li id="address1d">Address: </li>
+                    <li id="twitterd">Twitter:</li>
+                    <li id="facebookd">Facebook:</li>
+                    <li id="instagramd">Instagram:</li>
+                </ul>
+                <!-- <p id="name1d">First Name: </p>
+                <p id="name2d">Last Name: </p>
+                <p id="phone1d">Phone Number: </p>
+                <p id="emaild">Email: </p>
+                <p id="address1d">Address: </p>
+                <p id="twitterd">Twitter: </p>
+                <p id="facebookd">Facebook: </p>
+                <p id="instagramd">Instagram: </p> -->
+            </form>
+
+
+            <form style="background-color: white;" class="iinput_form">
+                <h3 style="color: green; text-transform: uppercase; cursor: pointer;" id="Adt">My Account Details</h3>
+                <p id="myb">My Balance: </p>
+                <p id="mye">My Earnings: </p>
+                <p id="ami">My Invested Amount: </p>
+                <input type="button" name="next" value=" My Account Details">
+            </form>
+        </div>
+        <div class="column middle">
+            <div style="width: 100%; height: 90%; background-color: white; ">
+                <h3 style="font-family: 'Julius Sans One', sans-serif; color:white; background-color: green; padding: 10px; width: 70%; margin-left: 15px; line-height: 1.4em;"> RESOURCES OR SKILLS I CAN PROVIDE</h3>
+                <form class="input_form" style="background-color: none;">
+                    <label for="project">Resource / Skill  Name<br></label>
+                    <input type="text" id="project-name" name="project" class="input"><br>
+                    <label for="location">Resource Location<br></label>
+                    <input type="text" id="project-location" name="location" class="input"><br>
+                    <label for="des">Resource Brief Description<br></label>
+                    <textarea name="des" id="project-brief"></textarea><br>
+                    <button id="send" class="add-proj">Add Resource</button>
+                </form>
+
+                <table>
+                    <tr>
+
+                        <th>Resource</th>
+                        <th>Resource Location</th>
+                        <th>Resource Description</th>
+                    </tr>
+                    <tr>
+
+                        <td>Resource</td>
+                        <td>Resource Location</td>
+                        <td>Resource Description</td>
+                    </tr>
+                    <tr>
+
+                        <td>Resource</td>
+                        <td>Resource Location</td>
+                        <td>Resource Description</td>
+                    </tr>
+                </table>
+                <form class="iiinput_form" id="f1m">
+                    <h3 id="jp1" style="font-family: roboto; color: white; background-color: green; padding: 12px; width: 30%; font-variant:small-caps; font-size: 1.4em; font-weight: bolder;">Joined Projects</h3>
+                    <table id="myproTable" border="2" cellpadding="10" style="border-collapse:collapse;">
+                        <thead>
+                            <th>Project Name</th>
+                            <th>Role In The Project</th>
+
+                        </thead>
+                    </table>
+                </form>
+                <script>
+                    var formw = document.getElementById("f1m");
+
+                    function handleForm1(event) {
+                        event.preventDefault();
+                    }
+                    formw.addEventListener('submit', handleForm1);
+                </script>
+
+            </div>
+
+        </div>
+        <div class="column right">
+
+            <form class="confirm_form">
+
+                <ul>
+                    <li> <input type="text" name="phon" id="phon" placeholder="Enter the Code sent to Phone... "> </li>
+                    <li><button>Confirm Your Code</button></li>
+                </ul>
+                <p style="font-family: roboto;  margin-left: 10px; color: green; text-align: center; margin-top: 0; padding-top:0;">Confirm code to view your profile</p>
+            </form>
+            <br><br>
+            <h3 style="font-family: 'Julius Sans One', sans-serif; color:orange; padding-left: 14%;"> PROJECTS HISTORY</h3>
+            <!-- <form id="msform ">
+                <fieldset>
+                    <h2 class="fs-title ">Enter Phone Number You Used To Sign Up To Display Your Details</h2>
+                    <input type="text " name="phon " id="phon " placeholder="Enter Phone: +2547........ ">
+                    <div id="recaptcha-container "></div>
+                    <p id="demo "></p>
+                    <p>a text with confirmation code to veryfy phone number will be send</p>
+                    <input type="button " onclick="phonCheckIf(); " value="confirm " id="psed1 " style="background-color:lightgreen; ">
+                    <input type="button " id="nbt1 " name="next " class="next action-button " value="Procide " style="visibility: hidden; ">
+                </fieldset>
+                <fieldset>
+                    <h2 class="fs-title " id="titleP1 ">Phone Number Verification</h2>
+                    <input type="text " id="verificationCode " placeholder="Enter verification code ">
+                    <input type="button " id="btncy1 " onclick="codeverify1(); " value="Verify code " style="background-color:lightgreen; ">
+                    <input type="button " id="lpbt1 " name="previous " class="previous action-button " value="Previous " onclick="demoShow(); ">
+
+                </fieldset>
+            </form>
+            <script>
+                var form3 = document.getElementById("msform ");
+
+                function handleForm3(event) {
+                    event.preventDefault();
+                }
+                form3.addEventListener('submit', handleForm3);
+            </script>
+
+        </div> -->
+        </div>
+
+
+        <!-- <input type="button " name="next " value=" My Resources "> -->
+
+
+        </body>
+
+        </html>

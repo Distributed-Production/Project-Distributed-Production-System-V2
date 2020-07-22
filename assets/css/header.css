@@ -1,0 +1,117 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: rgb(249, 249, 249);
+}
+
+#top_up {
+    background-color: rgb(0, 100, 0);
+    width: 100%;
+    color: white;
+    margin: 0;
+    text-align: center;
+    padding: 3px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 7;
+    height: 8.5%;
+    /* box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4); */
+}
+
+#top_up p {
+    /*border-right: 2px solid white;*/
+    font-family: 'Julius Sans One', sans-serif;
+}
+
+.talk {
+    position: absolute;
+    right: 1%;
+    top: 0;
+    font-size: 15px;
+    padding-right: 10px;
+}
+
+.kenya {
+    position: absolute;
+    left: 10px;
+    top: 0;
+    border-right: none;
+    padding-right: 10px;
+}
+
+.nav_up {
+    position: absolute;
+    top: 50px;
+    width: 100%;
+    left: 0;
+    background-color: white;
+    padding: 0 px;
+    box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
+    height: 70px;
+    z-index: 1;
+}
+
+.search {
+    margin: 0;
+    left: 14%;
+    position: absolute;
+    top: 30%;
+    color: orange;
+    word-spacing: 30px;
+    width: 200px;
+    font-size: 10px;
+}
+
+.search input {
+    width: 500px;
+    color: rgba(150, 150, 150, 0.3);
+    height: 37px;
+    background-color: white;
+    border: 1px solid green;
+    padding: 10px;
+}
+
+.search_icon {
+    position: absolute;
+    top: 13%;
+    left: 50%;
+    z-index: 2;
+}
+
+.nav_up a,
+.header a {
+    float: right;
+    text-decoration: none;
+    padding-right: 25px;
+    color: black;
+    font-family: 'Julius Sans One', sans-serif;
+    display: inline-block;
+}
+
+.nav_up a:hover,
+
+/* .header li:hover {
+    border-bottom: 3px solid orange;
+} */
+
+.active1 {
+    border-bottom: 2px solid green;
+    /* padding: 26px; */
+    color: white;
+    background-color: green;
+    padding-top: 0;
+    margin-top: 0;
+}
+
+.active1 a {
+    color: white;
+}
+
+.nav1 {
+    background-color: none;
+    padding: 26px;
+}
